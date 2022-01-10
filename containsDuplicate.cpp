@@ -1,3 +1,6 @@
+// *****************************************************
+// O(nlogn)
+// *****************************************************
 class Solution
 {
 public:
@@ -15,5 +18,26 @@ public:
             break;
         }
         return dupeFlag;
+    }
+};
+// *****************************************************
+// O(n)
+// *****************************************************
+class Solution {
+public:
+    bool containsDuplicate(vector<int>& nums) {
+        // Initialize hash table
+        unordered_set<int> map;
+        // Grab number from vector
+        for(int i: nums){
+            // If number is found in table return true
+            if(map.find(i) != map.end()){
+                return true;
+            }
+            // If not found in table, insert to table
+            map.insert(i);
+        }
+        // If all numbers in vector are inserted, return false.
+        return false;
     }
 };
