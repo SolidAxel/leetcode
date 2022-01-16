@@ -1,7 +1,10 @@
+#include <vector>
+#include <algorithm>
+
 class Solution
 {
 public:
-    int maxProfit(vector<int> &prices)
+    int maxProfit(std::vector<int> &prices)
     {
         // Set minimum price to biggest int value so it's definitely replaced.
         int minPrice = INT_MAX;
