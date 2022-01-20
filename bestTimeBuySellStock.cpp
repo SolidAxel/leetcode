@@ -5,7 +5,7 @@ class Solution
 {
 public:
     int maxProfit(std::vector<int> &prices)
-    {
+    {  
         // Set minimum price to biggest int value so it's definitely replaced.
         int minPrice = INT_MAX;
         int maxProfit = 0;
